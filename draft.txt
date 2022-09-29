@@ -1,0 +1,10 @@
+<!--{% if 'DELETE' in context["permissions"] %}
+        <form action='/{{context["entity"]}}/view' method="POST">
+            <input type="button" name="view" value="{{row.id}}">
+        </form>
+        {% endif %}
+        {% if 'POST' in context["permissions"] %}
+            <form action='/{{context["entity"]}}/create' method="POST">
+                <input type="button" name="view" value="{{row.id}}">
+            </form>
+        {% endif %}-->

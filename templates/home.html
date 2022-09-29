@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            Body {  
+                font-family: Calibri, Helvetica, sans-serif;  
+                background-color: pink;  
+            }  
+            button {   
+                background-color: #4CAF50;   
+                width: 100%;  
+                    color: orange;   
+                    padding: 15px;   
+                    margin: 10px 0px;   
+                    border: none;   
+                    cursor: pointer;   
+                    }   
+            form {   
+                    border: 3px solid #f1f1f1;   
+                }   
+            input[type=text], input[type=password] {   
+                    width: 100%;   
+                    margin: 8px 0;  
+                    padding: 12px 20px;   
+                    display: inline-block;   
+                    border: 2px solid green;   
+                    box-sizing: border-box;   
+                }  
+            button:hover {   
+                    opacity: 0.7;   
+                }   
+            .cancelbtn {   
+                    width: auto;   
+                    padding: 10px 18px;  
+                    margin: 10px 5px;  
+                }   
+                    
+                
+            .container {   
+                    padding: 25px;   
+                    background-color: lightblue;  
+                }   
+        </style>
+    </head>
+    <body>
+        {% if not current_user.is_authenticated %}
+            <a href='/login'>Log in</a><br>
+            <a href='/register'>Register</a><br>
+        {% endif %}  
+        <a href='/logout'>Log out</a><br><br>
+
+        <form action='/home' method='POST'>
+            <input type='submit' name='entity' value='User'><br>
+            <input type='submit' name='entity' value='Permission'><br>
+            <input type='submit' name='entity' value='Group'><br>
+            <input type='submit' name='entity' value='League'><br>
+            <input type='submit' name='entity' value='FC'><br>
+            <input type='submit' name='entity' value='Player'><br>
+        </form>
+        <script src="" async defer></script>
+    </body>
+</html>
